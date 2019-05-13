@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 //  const Button = () => {
 
 //      return (
@@ -10,7 +9,7 @@ import React from 'react';
 //      );
 //  };
 
-class ButtonWaiter extends React.Component {
+export class ButtonWaiter extends React.Component {
     render () {
         return (
             <button className="btn btn-success">
@@ -19,7 +18,3 @@ class ButtonWaiter extends React.Component {
         )
     }
 }
-
-
-
-export default ButtonWaiter

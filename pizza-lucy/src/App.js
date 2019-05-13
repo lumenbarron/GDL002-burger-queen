@@ -1,11 +1,11 @@
 //import React, {Component} from 'react';
 import React from 'react'
 import './App.css';
-import ButtonWaiter from './components/button';
+import {ButtonWaiter} from './components/button';
+import Button from '@material-ui/core/Button';
 import {Navigation} from './components/Navigation';
 import {Form} from './components/Form';
 import {desayuno} from './desayuno.json'
-
 
 // function App() {
 //   return (
@@ -43,7 +43,7 @@ class App extends React.Component {
       desayuno : [...this.state.desayuno, desayuno ]
     })
   }
-  
+
   handleDelete (index) {
     this.setState({
       desayuno: this.state.desayuno.filter((element , i) => {
@@ -80,6 +80,9 @@ class App extends React.Component {
       <header className="App-header">
         <h1 >Lucy lu</h1>
         <ButtonWaiter />
+        <Button className='buttonWaiter' variant="contained" >
+        Primary
+        </Button>
       </header>
       
       <Navigation title='Mi primera navegación' />
