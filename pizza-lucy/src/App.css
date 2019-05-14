@@ -1,7 +1,7 @@
 
 .App-header {
-  background-image: url(./images/baked-beer-cheese-724216.jpg);
-  height: 500px; /* You must set a specified height */
+  background: url(./images/pizza2.jpg);
+  height: 758px; /* You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
@@ -17,9 +17,15 @@
   color: #61dafb;
 }
 
-.buttonWaiter{
-  background-color: green;
+/* .buttonsContent {
+  display: flex;
+  justify-content: center;
 }
+
+.buttonsIntro {
+  margin : 15px;
+  font-size: 27px
+} */
 
 @keyframes App-logo-spin {
   from {

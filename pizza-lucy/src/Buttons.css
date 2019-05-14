@@ -1,0 +1,9 @@
+.buttonsContent {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .buttonsIntro {
+    margin : 15px;
+    font-size: 27px
+  }

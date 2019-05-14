@@ -4,7 +4,6 @@
   "private": true,
   "homepage": "https://lumenbarron.github.io/GDL002-burger-queen",
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
     "contentful": "^7.6.0",
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",

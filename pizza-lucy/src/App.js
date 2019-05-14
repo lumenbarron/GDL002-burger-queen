@@ -1,8 +1,8 @@
 //import React, {Component} from 'react';
 import React from 'react'
 import './App.css';
-import {ButtonWaiter} from './components/button';
-import Button from '@material-ui/core/Button';
+import './Button.css';
+import {Buttons} from './components/button';
 import {Navigation} from './components/Navigation';
 import {Form} from './components/Form';
 import {desayuno} from './desayuno.json'
@@ -78,13 +78,9 @@ class App extends React.Component {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 >Lucy lu</h1>
-        <ButtonWaiter />
-        <Button className='buttonWaiter' variant="contained" >
-        Primary
-        </Button>
+        <Buttons/>
       </header>
-      
+
       <Navigation title='Mi primera navegación' />
       <Form onAddBreakfast = {this.handleAddBreakfast} />
       <span className = "badge badge-pill badge-light ml-2">

@@ -19,6 +19,7 @@ export class Form extends React.Component {
         })
         console.log(this.state);
         
+        
     }
 
     handleSubmit (e) {
