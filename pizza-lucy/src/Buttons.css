@@ -7,3 +7,26 @@
     margin : 15px;
     font-size: 27px
   }
+
+#buttonInicio {
+  background-color: #5A7202;
+  width: 110px
+}
+
+#buttonDesayuno{
+  background-color: #AE2506
+}
+
+#buttonAlmuerzo{
+  background-color: orangered
+}
+
+#buttonComandas{
+  background-color: #243540
+}
+
+.buttonsInicio {
+  margin: 10px;
+  color : white;
+  font-size: 20px
+}

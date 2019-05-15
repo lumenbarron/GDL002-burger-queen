@@ -1,7 +1,7 @@
 //import React, {Component} from 'react';
 import React from 'react'
 import './App.css';
-import './Button.css';
+import './Buttons.css';
 import {Buttons} from './components/button';
 import {Navigation} from './components/Navigation';
 import {Form} from './components/Form';

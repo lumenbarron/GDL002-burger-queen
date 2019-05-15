@@ -1,7 +1,7 @@
 
 .App-header {
   background: url(./images/pizza2.jpg);
-  height: 758px; /* You must set a specified height */
+  height: 551px; /* You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
@@ -16,16 +16,6 @@
 .App-link {
   color: #61dafb;
 }
-
-/* .buttonsContent {
-  display: flex;
-  justify-content: center;
-}
-
-.buttonsIntro {
-  margin : 15px;
-  font-size: 27px
-} */
 
 @keyframes App-logo-spin {
   from {

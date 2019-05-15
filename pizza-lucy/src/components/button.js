@@ -1,16 +1,5 @@
 import React from 'react';
 
-//  const Button = () => {
-
-//      return (
-//          <button className="btn btn-success">
-//             Meseros
-//         </button>
-//      );
-//  };
-
-
-
 export class Buttons extends React.Component {
     render () {
         return (
