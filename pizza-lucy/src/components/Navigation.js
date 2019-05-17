@@ -3,7 +3,7 @@ import React from 'react';
 export class Navigation extends React.Component {
   render () {
       return (
-        <section className='container'>
+       
           <section className='row'> 
           <section className ='col-md-1'></section>
             <nav className="nav nav-pills nav-fill col-md-10">
@@ -14,7 +14,7 @@ export class Navigation extends React.Component {
             </nav>
             <section className ='col-md-1'></section>  
           </section>
-        </section>
+        
   )
   }
 }

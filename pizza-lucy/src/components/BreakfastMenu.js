@@ -2,18 +2,24 @@ import React from "react";
 import {BreakfastCards} from "./BreakfastCards";
 import {LunchCards} from "./LaunchCards";
 import {Navigation} from './Navigation';
-import "../styles/cards.css";
+import "../styles/menus.css";
 
 export class BreakfastMenu extends React.Component {
     render () {
         return (
         <main className="breakfastMenu">
-        <Navigation />
             <section className="container">
-            <section className='row'>
-            <BreakfastCards />
-            <LunchCards />
-            </section>
+                <Navigation />
+                    <section className="row">
+                        <section className='foodCards col-md-5'>
+                            <BreakfastCards />
+                            <LunchCards />
+                        </section>
+                        <section className='col-md-1'> </section>
+                        <section className='ordersMenu col-md-6'>
+                        <BreakfastCards />
+                        </section>
+                    </section>
             </section>
         </main>
         )

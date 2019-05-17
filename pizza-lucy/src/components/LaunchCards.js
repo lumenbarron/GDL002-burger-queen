@@ -1,6 +1,5 @@
 import React from "react";
 import { almuerzo } from "./almuerzo.json";
-import "../styles/cards.css";
 
 export class LunchCards extends React.Component {
   constructor() {
@@ -25,12 +24,10 @@ console.log('funcionando' + name);
       );
     });
     return(
-      <section className="container">
       <section className="row">
         <section className='breakfastContentCards'>
           {luch}
         </section>
-      </section>
       </section>
     ) 
   }
