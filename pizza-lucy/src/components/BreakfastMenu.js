@@ -2,6 +2,7 @@ import React from "react";
 import {BreakfastCards} from "./BreakfastCards";
 import {LunchCards} from "./LaunchCards";
 import {Navigation} from './Navigation';
+import {CustomerInput} from './CustomerInput';
 import "../styles/menus.css";
 
 export class BreakfastMenu extends React.Component {
@@ -17,7 +18,7 @@ export class BreakfastMenu extends React.Component {
                         </section>
                         <section className='col-md-1'> </section>
                         <section className='ordersMenu col-md-6'>
-                        <BreakfastCards />
+                        <CustomerInput />
                         </section>
                     </section>
             </section>

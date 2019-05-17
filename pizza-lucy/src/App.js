@@ -2,7 +2,7 @@
 import React from 'react'
 import './App.css';
 import './styles/Buttons.css';
-import {Buttons} from './components/button';
+import {Buttons} from './components/buttonsHome';
 
 import {BreakfastMenu} from './components/BreakfastMenu';
 import {Form} from './components/Form';
