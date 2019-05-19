@@ -1,6 +1,6 @@
 import React , { Component } from "react";
 
-class Lucy extends Component {
+export class Lucy extends Component {
   constructor (props) {
     super (props);
 
@@ -63,12 +63,12 @@ deleteItem(id){
         <ul> 
         {this.state.list.map (item => {
           return (
-            <li key={item.id}>
+            <p key={item.id}>
             {item.value}
             <button
             onClick = { () => this.deleteItem(item.id)}
             > X </button>
-            </li>
+            </p>
           )
         })}
         </ul>
