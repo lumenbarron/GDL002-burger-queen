@@ -24,7 +24,7 @@ console.log('funcionando' + name);
       );
     });
     return(
-      <section className="row">
+      <section className="showCards">
         <section className='breakfastContentCards'>
           {breakfast}
         </section>
