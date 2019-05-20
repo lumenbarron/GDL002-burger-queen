@@ -24,11 +24,11 @@ console.log('funcionando' + name);
       );
     });
     return(
-      <section className="showCards">
+
         <section className='breakfastContentCards'>
           {breakfast}
         </section>
-      </section>
+      
     ) 
   }
 }
