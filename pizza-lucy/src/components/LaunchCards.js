@@ -1,18 +1,26 @@
 import React from "react";
 import { almuerzo } from "./almuerzo.json";
+import { Tickets } from './Tickets';
 
 export class LunchCards extends React.Component {
   constructor() {
     super();
     this.state = {
-      almuerzo
+      almuerzo,
+      orders: []
     };
   }
 
 print = (event) => {
   const target=event.currentTarget;
   const name = target.getAttribute('name')
+  const price= target.getAttribute('value')
+  const order = {
+    name, 
+    price
+  }
 console.log('funcionando' + name);
+this.setState({ orders: [...this.state.orders, order]})
 
 }
   render() {
@@ -26,8 +34,10 @@ console.log('funcionando' + name);
     return(
       <section className="row">
         <section className='breakfastContentCards'>
-          {luch}
+          <div>{luch}</div>
+          <div><Tickets order={this.state.orders} /></div>
         </section>
+        <section></section>
       </section>
     ) 
   }

@@ -14,7 +14,17 @@
 }
 
 #buttonDesayuno{
-  background-color: #AE2506
+  background-color: #AE2506;
+  /* position: relative;
+    left: 300px;
+    top: -63px; */
+}
+
+#prueba{
+  position: relative;
+  left: 350px;
+  top: -63px;
+  display: flex;
 }
 
 #buttonAlmuerzo{
@@ -28,5 +38,6 @@
 .buttonsInicio {
   margin: 10px;
   color : white;
-  font-size: 20px
+  font-size: 20px;
+  text-align: center
 }
