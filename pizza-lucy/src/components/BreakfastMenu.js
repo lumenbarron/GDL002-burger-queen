@@ -1,7 +1,5 @@
 import React from "react";
-import {BreakfastCards} from "./BreakfastCards";
-import {LunchCards} from "./LaunchCards";
-import {Navigation, ButtonLunch, ButtonBreakfast, ButtonHome, ButtonOrders } from './Navigation';
+import {Navigation, ButtonLunch, ButtonBreakfast } from './Navigation';
 import {CustomerInput} from './CustomerInput';
 import "../styles/menus.css";
 

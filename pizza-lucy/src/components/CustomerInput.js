@@ -1,5 +1,4 @@
 import React from 'react';
-import {Lucy} from './List'
 
 export class CustomerInput extends React.Component {
     constructor (props) {
