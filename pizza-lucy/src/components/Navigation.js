@@ -1,6 +1,7 @@
 import React from 'react';
 import {BreakfastCards} from './BreakfastCards';
 import {LunchCards} from './LaunchCards';
+import {Link} from 'react-router-dom';
 
 // export class Navigation extends React.Component {
 //   constructor () {
@@ -88,27 +89,27 @@ export class ButtonLunch extends React.Component {
   }
 }
 
-export class ButtonHome extends React.Component {
-  render () {
-      return (
-          <section > 
-              <a className="nav-item nav-link buttonsInicio" href="1.2"  id= "buttonInicio"> Inicio</a>
-          </section>
+// export class ButtonHome extends React.Component {
+//   render () {
+//       return (
+//           <section > 
+//               <a className="nav-item nav-link buttonsInicio" href="1.2"  id= "buttonInicio"> Inicio</a>
+//           </section>
 
-  )
-  }
-}
+//   )
+//   }
+// }
 
-export class ButtonOrders extends React.Component {
-  render () {
-      return (
-          <section > 
-              <a className="nav-item nav-link buttonsInicio" href="1.3" id= "buttonComandas"> Comandas </a>
-          </section>
+// export class ButtonOrders extends React.Component {
+//   render () {
+//       return (
+//           <section > 
+//               <a className="nav-item nav-link buttonsInicio" href="1.3" id= "buttonComandas"> Comandas </a>
+//           </section>
 
-  )
-  }
-}
+//   )
+//   }
+// }
 
 
 export class Navigation extends React.Component {
@@ -116,10 +117,9 @@ export class Navigation extends React.Component {
       return (
           <section className='row'> 
           <section className ='col-md-1'></section>
-           
-              <a className="nav-item nav-link buttonsInicio col-md-2" href="1.2"  id= "buttonInicio"> Inicio</a>
+                <Link to='/' className="nav-item nav-link buttonsInicio col-md-2"  id= "buttonInicio">Inicio</Link>
              <section className ='col-md-6'></section>
-              <a className="nav-item nav-link buttonsInicio col-md-2" href="1.3" id= "buttonComandas"> Comandas </a>
+                <Link to='/orders' className="nav-item nav-link buttonsInicio col-md-2" href="1.3" id= "buttonComandas"> Comandas </Link>
           
             <section className ='col-md-1'></section>  
           </section>

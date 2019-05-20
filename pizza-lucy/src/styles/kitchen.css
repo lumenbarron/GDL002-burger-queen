@@ -1,0 +1,8 @@
+.kitchenMenu {
+    background: url(../images/kitchen.jpg);
+  height: 768px;
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  display: flex;
+}

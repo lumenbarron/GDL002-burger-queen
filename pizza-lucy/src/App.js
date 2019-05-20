@@ -1,134 +1,37 @@
-//import React, {Component} from 'react';
-import React from 'react'
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-import './styles/Buttons.css';
-import {Buttons} from './components/buttonsHome';
+import {Home} from './components/Home';
+import {Waiter} from './components/Waiter';
+import {Kitchen} from './components/Kitchen';
+import {Orders} from './components/Orders'
 
-import {BreakfastMenu} from './components/BreakfastMenu';
-import {Form} from './components/Form';
-//import {desayuno} from './desayuno.json'
 
 // class App extends React.Component {
-//   constructor (props) {
-//     super (props);
-//     this.state = { 
-//       desayuno : desayuno
-//     };
-//     this.handleAddBreakfast = this.handleAddBreakfast.bind(this);
-//   }
-
-//   handleAddBreakfast (desayuno) {
-//     this.setState({
-//       desayuno : [...this.state.desayuno, desayuno ]
-//     })
-//   }
-
-//   handleDelete (index) {
-//     this.setState({
-//       desayuno: this.state.desayuno.filter((element , i) => {
-//         return i !== index
-//       })
-//     })
-//     //console.log(index);
-    
-//   }
 //   render () {
-//     const breakfast = this.state.desayuno
-//     .map((item , i) => {
-//       return (
-//       <div className="col-md-4">
-//         <div className="card mt-4"> 
-//           <div className="card-header">
-//             <h3>{item.title}</h3>
-//           </div>
-//           <div className="card-body">
-//             <p>{item.price}</p>
-//           </div>
-//           <div className='card-footer'>
-//           <button className ='btn btn danger' 
-//           onClick={this.handleDelete.bind(this, i)}>
-//           Borrar
-//           </button>
-//           </div>
-//         </div>
-//       </div>
-//       )
-//     })
 //   return (
 //     <div className="App">
-//       <header className="App-header">
-//         <Buttons/>
-//       </header>
 
-//       <Navigation />
-//       <Form onAddBreakfast = {this.handleAddBreakfast} />
-//       <span className = "badge badge-pill badge-light ml-2">
-//         {this.state.desayuno.length}
-//         </span>
-//       <div className="container">
-//         <div className="row mt-4">
-//         {breakfast}
-        
-//         </div>
-        
-//       </div>
-//       <p>
-        
-//       </p>
+//       <Home />
+//       <Waiter />
+    
 //     </div>
+
 //   );
 // }
 // }
 
-//  export default App;
+// export default App;
 
+const App = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component = {Home} />
+      <Route path="/waiter" component = {Waiter} />
+      <Route path="/kitchen" component = {Kitchen} />
+      <Route path="/orders" component = {Orders} />
+    </Switch>
+  </BrowserRouter>
+)
 
-class App extends React.Component {
-  // constructor (props) {
-  //   super (props);
-  //   this.state = { 
-  //     desayuno : desayuno
-  //   };
-  //   this.handleAddBreakfast = this.handleAddBreakfast.bind(this);
-  // }
-
-  handleAddBreakfast (desayuno) {
-    this.setState({
-      desayuno : [...this.state.desayuno, desayuno ]
-    })
-  }
-
-  handleDelete (index) {
-    this.setState({
-      desayuno: this.state.desayuno.filter((element , i) => {
-        return i !== index
-      })
-    })
-    //console.log(index);
-    
-  }
-  render () {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Buttons/>
-      </header>
-
-      
-      <BreakfastMenu  />
-      <Form onAddBreakfast = {this.handleAddBreakfast} />
-      {/* <span className = "badge badge-pill badge-light ml-2">
-        {this.state.desayuno.length}
-        </span>
-      <div className="container">
-        <div className="row mt-4"> */}
-        {/* {breakfast} */}
-        
-        </div>
-
-  );
-}
-}
-
- export default App;
-
+export default App;
