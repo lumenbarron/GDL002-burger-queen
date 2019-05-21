@@ -5,6 +5,7 @@
   "homepage": "https://lumenbarron.github.io/GDL002-burger-queen",
   "dependencies": {
     "contentful": "^7.6.0",
+    "firebase": "^6.0.2",
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

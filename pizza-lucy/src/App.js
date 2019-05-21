@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
+import firebase from './components/firebase';
 import {Home} from './components/Home';
 import {Waiter} from './components/Waiter';
 import {Kitchen} from './components/Kitchen';

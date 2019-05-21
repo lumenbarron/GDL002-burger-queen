@@ -5,7 +5,7 @@ export class ButtonBreakfast extends React.Component {
     constructor (props) {
       super (props)
       this.state = { show : false};
-      this.toggleDiv = this.toggleDiv.bind(this)
+      // this.toggleDiv = this.toggleDiv.bind(this)
     }
   
     toggleDiv = (e) => {
