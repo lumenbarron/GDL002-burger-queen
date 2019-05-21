@@ -1,43 +1,44 @@
-.buttonsContent {
+.buttonsHomeContent {
     display: flex;
     justify-content: center;
   }
   
-  .buttonsIntro {
+.buttonsHomeLink {
     margin : 15px;
     font-size: 27px
   }
 
-#buttonInicio {
+.buttonsInicio {
+    margin: 10px;
+    color : white;
+    font-size: 20px;
+    text-align: center
+  }
+
+#buttonBackHome {
   background-color: #5A7202;
-  width: 110px
+  width: 110px;
+  margin-left: 10%;
 }
 
-#buttonDesayuno{
+#buttonBreakfast{
   background-color: #AE2506;
-  /* position: relative;
-    left: 300px;
-    top: -63px; */
 }
 
-#prueba{
+#buttonLunch{
+  background-color: orangered;
+  position: absolute;
+  left: 150px;
+  display: flex
+}
+
+#buttonOrders{
+  background-color: #243540
+}
+
+#buttonsFood{
   position: relative;
   left: 350px;
   top: -63px;
   display: flex;
-}
-
-#buttonAlmuerzo{
-  background-color: orangered
-}
-
-#buttonComandas{
-  background-color: #243540
-}
-
-.buttonsInicio {
-  margin: 10px;
-  color : white;
-  font-size: 20px;
-  text-align: center
 }

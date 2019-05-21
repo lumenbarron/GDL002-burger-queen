@@ -33,7 +33,7 @@ export class CustomerInput extends React.Component {
     render () {
         return (
             <section>
-                <section className="input-group"> 
+                <section className="input-group input-form"> 
                     <input 
                     type="text" 
                     placeholder="Nombre del cliente"
@@ -45,7 +45,7 @@ export class CustomerInput extends React.Component {
                             <button 
                             type="submit" 
                             onClick={() => this.addName()} 
-                            className="btn btn-outline-secondary buttonsInicio" 
+                            className="btn btn-outline-secondary buttonsInicio btn-input" 
                             id="button-addon2">
                             Enviar
                             </button>

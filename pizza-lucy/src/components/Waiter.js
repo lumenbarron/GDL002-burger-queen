@@ -1,11 +1,11 @@
 import React from 'react';
-import {BreakfastMenu} from './BreakfastMenu'
+import {Menus} from './Menus'
 
 export class Waiter extends React.Component {
     render () {
         return (
             <section>
-            <BreakfastMenu/>
+            <Menus />
           </section>
         )
     }

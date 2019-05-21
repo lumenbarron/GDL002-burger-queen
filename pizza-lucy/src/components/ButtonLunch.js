@@ -1,5 +1,5 @@
 import React from 'react';
-import {LunchCards} from './LaunchCards';
+import {LunchCards} from './LunchCards';
 
 export class ButtonLunch extends React.Component {
     constructor (props) {
@@ -16,15 +16,15 @@ export class ButtonLunch extends React.Component {
   
     render () {
         return (
-            <article>
+            <section>
               <a
               onClick={ this.toggleDiv}
               className="btn buttonsInicio" 
-              href="1.2" id= "buttonAlmuerzo">
+              href="1.2" id= "buttonLunch">
               Almuerzo
               </a>
               {this.state.show && <LunchCards className="showCards" />}
-            </article>
+            </section>
     )
     }
   }

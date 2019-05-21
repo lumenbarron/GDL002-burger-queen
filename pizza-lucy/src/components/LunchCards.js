@@ -1,6 +1,7 @@
 import React from "react";
 import { almuerzo } from "./almuerzo.json";
 import { Tickets } from './Tickets';
+import {CustomerInput} from './CustomerInput';
 
 export class LunchCards extends React.Component {
   constructor() {
@@ -19,25 +20,28 @@ print = (event) => {
     name, 
     price
   }
-console.log('funcionando' + name);
 this.setState({ orders: [...this.state.orders, order]})
 
 }
   render() {
     const luch = this.state.almuerzo.map((item, i) => {
       return (
-            <button className = " btn breakfastCards" name ={item.title} value={item.price} onClick={this.print}>
+            <button className = " btn foodCards" name ={item.title} value={item.price} onClick={this.print}>
               {item.title} ${item.price}
             </button>
       );
     });
+
     return(
-      <section className="row">
-        <section className='breakfastContentCards'>
-          <div>{luch}</div>
-          <div><Tickets order={this.state.orders} /></div>
+      <section >
+        <section className='foodContentCards lunchContainerCards'>
+        <CustomerInput />
+          <section className='foodItems'>{luch}</section>
+            <section className='itemsTickets'>
+              <Tickets 
+              order={this.state.orders} />
+            </section>
         </section>
-        <section></section>
       </section>
     ) 
   }

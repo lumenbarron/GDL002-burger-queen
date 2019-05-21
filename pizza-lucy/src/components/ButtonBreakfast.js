@@ -19,10 +19,9 @@ export class ButtonBreakfast extends React.Component {
               <a 
               onClick={ this.toggleDiv}
               className="btn buttonsInicio" 
-              href="1.1" id= "buttonDesayuno">
+              href="1.1" id= "buttonBreakfast">
               Desayuno
               </a>
-            
               {this.state.show && <BreakfastCards className="showCards" />}
           </section>
     )

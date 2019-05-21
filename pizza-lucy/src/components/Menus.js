@@ -1,28 +1,22 @@
 import React from "react";
 import {ButtonBreakfast} from './ButtonBreakfast'
 import {ButtonLunch} from './ButtonLunch';
-import {ButtonHome} from './ButtonHome';
+import {ButtonBackHome} from './ButtonBackHome';
 import {ButtonOrders} from './ButtonOrders'
-import {Navigation} from './Navigation';
-import {CustomerInput} from './CustomerInput';
+// import {Navigation} from './Navigation';
 import "../styles/menus.css";
 
 
-export class BreakfastMenu extends React.Component {
+export class Menus extends React.Component {
     render () {
         return (
-        <main className="breakfastMenu">
+        <main className="menus">
             <section className="container">
-            <ButtonHome  />
+            <ButtonBackHome  />
             <ButtonOrders  />
-                        <section id="prueba">
-                        <ButtonBreakfast className='showCards' />
-                        <ButtonLunch className='showCards' />
-                        </section>
-                        
-                        <CustomerInput />
-                        <section className='ordersMenu'>
-                        
+                        <section id="buttonsFood">
+                        <ButtonBreakfast />
+                        <ButtonLunch />
                         </section>
             </section>
         </main>
