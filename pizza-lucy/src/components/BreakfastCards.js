@@ -1,5 +1,5 @@
 import React from "react";
-import { desayuno } from "./desayuno.json";
+// import { desayuno } from "./desayuno.json";
 import { Tickets } from './Tickets';
 import {CustomerInput} from './CustomerInput';
 import firebase from './firebase';
@@ -19,10 +19,11 @@ export class BreakfastCards extends React.Component {
     .ref().child('desayuno');
     dbRef.on('value', snap => {
       this.setState({
-        desayuno:snap.val()
+        desayuno: snap.val()
       })
     })
   }
+
   // componentDidMount(){
   //   db.collection('desayuno').get()
   //   .then((snapShots) => {
@@ -38,7 +39,9 @@ print = (event) => {
   const target=event.currentTarget;
   const name = target.getAttribute('name')
   const price = target.getAttribute('value')
+  const id = target.getAttribute('key')
   const order = {
+    id,
     name, 
     price
   }
