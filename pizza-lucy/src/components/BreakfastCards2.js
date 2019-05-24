@@ -61,17 +61,6 @@ deleteItem = ( id) => {
   
 }
 
-// deleteItem = (item) => {
-//   console.log('borrando')
-//   const newState = this.state.orders.slice();
-//   if (newState.indexOf(item)> -1) {
-//     newState.splice(newState.indexOf(item),1);
-//     this.setState({orders:newState})
-    
-//   }
-// }
-
-
 onChange = (e) => {
     this.setState({
       [e.target.name]:e.target.value
