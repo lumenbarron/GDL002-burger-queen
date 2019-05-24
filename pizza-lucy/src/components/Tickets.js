@@ -44,7 +44,7 @@ export class Tickets extends React.Component {
                 value={item.price} 
                 className='itemsName'>
                 {item.name} / ${item.price}
-                <button onClick = {this.props.delete} >X</button>
+                <button onClick = {(e) => this.props.delete(item)} >X</button>
                 </h5>
             )
         })

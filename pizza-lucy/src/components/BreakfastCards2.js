@@ -51,12 +51,25 @@ print = (event) => {
 
 }
 
-deleteItem = (id) => {
+deleteItem = ( id) => {
   console.log('borrando')
-  const updateOrders =this.state.orders.filter(item => item.id !== id);
-  this.setState({orders:updateOrders})
+  // e.preventDefault();
+  const updateOrders =this.state.orders.filter(item => {
+    return item !== id
+  });
+  this.setState({orders : [...updateOrders]})
   
 }
+
+// deleteItem = (item) => {
+//   console.log('borrando')
+//   const newState = this.state.orders.slice();
+//   if (newState.indexOf(item)> -1) {
+//     newState.splice(newState.indexOf(item),1);
+//     this.setState({orders:newState})
+    
+//   }
+// }
 
 
 onChange = (e) => {
