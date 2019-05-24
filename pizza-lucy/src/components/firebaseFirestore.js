@@ -1,7 +1,7 @@
 import * as firebase from 'firebase';
 import firestone from 'firebase/firestore'
 
-const settings = {timestampsInSnapshots: true};
+//const settings = {timestampsInSnapshots: true};
 
 //  Configuration firebase
 const firebaseConfig = {
@@ -15,5 +15,5 @@ const firebaseConfig = {
   };
 //  Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  firebase.firestore().settings(settings);
+  //firebase.firestore().settings(settings);
 export default firebase;

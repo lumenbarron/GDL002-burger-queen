@@ -40,9 +40,9 @@ print = (event) => {
   const target=event.currentTarget;
   const name = target.getAttribute('name')
   const price = target.getAttribute('value')
-  const id = target.getAttribute('key')
+  const id = target.getAttribute('name')
   const order = {
-    id,
+   id,
     name, 
     price
   }
@@ -51,26 +51,42 @@ print = (event) => {
 
 }
 
+deleteItem = (id) => {
+  console.log('borrando')
+  const updateOrders =this.state.orders.filter(item => item.id !== id);
+  this.setState({orders:updateOrders})
+  
+}
+
+
 onChange = (e) => {
-    const state = this.state.orders
-    state[e.target.name] = e.target.value;
-    this.setState(state);
+    this.setState({
+      [e.target.name]:e.target.value
+    })
 }
 
 sendOrders = (e) => {
     e.preventDefault ();
     console.log('holi');
-
-    firebase.doc('comandas').add(this.state.orders)
+    const db = firebase.firestore();
+    db.settings({
+      timestampsInSnapshots :true
+    })
+    db.collection('comandas').add({
+     orders : this.state.orders
+    })
+    // this.setState({
+    //   orders : []
+    // })
 }
-
 
   render() {
     const breakfast = this.state.desayuno.map((item, i) => {
       return (
             <button 
             className = " btn foodCards" 
-            key = {i} name ={item.title} 
+            key = {i}    
+            name ={item.title} 
             value={item.price} 
             onClick={this.print}>
              {item.title} ${item.price}
@@ -85,7 +101,9 @@ sendOrders = (e) => {
             <section className='itemsTickets'>
              <Tickets 
             order={this.state.orders}
+            delete = {this.deleteItem}
             sendOrders={this.sendOrders}
+            onChange={this.onChange}
             />
           </section>
         </section>

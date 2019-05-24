@@ -35,23 +35,25 @@ export class Tickets extends React.Component {
     //}
 
     render () {
-        console.log(this.props.order)
+        console.log(this.props.order)         
         const tickets = this.props.order.map((item, i ) => {
             return (
                 <h5 
                 key={i}
+                name ={item.title} 
+                value={item.price} 
                 className='itemsName'>
                 {item.name} / ${item.price}
-                <button>X</button>
+                <button onClick = {this.props.delete} >X</button>
                 </h5>
             )
         })
         return (
+            <section> 
             <section className ="ticketList" > 
-             <section  > 
              { tickets } 
-             </section>
-             <button onChange={this.props.onChange} onClick={this.props.sendOrders} >update</button>
+            </section>
+            <button onChange={this.props.onChange} onClick={this.props.sendOrders} >update</button>
             </section>
         )
     }
