@@ -42,7 +42,7 @@ print = (event) => {
   const price = target.getAttribute('value')
   const id = target.getAttribute('name')
   const order = {
-   id,
+    id,
     name, 
     price
   }
@@ -69,11 +69,11 @@ onChange = (e) => {
 
 sendOrders = (e) => {
     e.preventDefault ();
-    console.log('holi');
+    console.log('subiendo a firestore');
     const db = firebase.firestore();
-    db.settings({
-      timestampsInSnapshots :true
-    })
+    // db.settings({
+    //   timestampsInSnapshots :true
+    // })
     db.collection('comandas').add({
      orders : this.state.orders
     })
