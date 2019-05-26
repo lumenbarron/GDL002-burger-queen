@@ -42,23 +42,23 @@ export class Orders extends React.Component {
 
         getData = (querySnapshot) => {
         
-        console.log('jalando la data');
+        //console.log('jalando la data');
 
             const orders = [];
             querySnapshot.forEach(function(doc){
-                console.log(doc.id, doc.data())
+                //console.log(doc.id, doc.data())
                //const {doc} = doc.data()
                 orders.push({
                     key : doc.id,
-                    doc,
-                    name :doc.data().orders[0].name,
-                    price :doc.data().orders[0].price,
+                    //doc,
+                    //name :doc.data().orders[0].name,
+                    name :doc.data().orders,
+                    //price :doc.data().orders[0].price,
                 })
-                console.log(orders)
+               // console.log(orders)
             })
             this.setState({orders})
-            console.log(this.state.orders)
-            console.log(this.state.ordersNew);
+            //console.log(this.state.orders)
             
     }
 
@@ -76,24 +76,40 @@ export class Orders extends React.Component {
            
     render () {
         console.log(this.state.orders)
-    const allOrders = this.state.orders.map((item, i) => {
-        return (
-              <button 
-              className = " btn foodCards" 
-              key = {i}    
-              name ={item.name} 
-              value={item.price} 
-              onClick={this.print}>
-               {item.name} ${item.price}
-              </button>
-        );
-      });
+        //const allOrders = this.state.orders.map((item) => item.name)
+        // const forEachOrder = allOrders.map((doc, i) => doc.name)
+        const allOrders = this.state.orders.map((item) => {
+             return (
+<section>
+    {item.name.forEach(item2 => {
+        return <p>{item2} </p>
+    })}
+</section>
+             )
+             
+             //item.name.forEach(item2 => {
+        //         return (console.log(item2))
+        //     })
+         }) 
+             // <button 
+            //   className = " btn foodCards" 
+            //   key = {i}    
+            //   name ={item.name} 
+            //   value={item.price} 
+             // onClick={this.print}>
+             //  {doc}
+              //</button>
+        //);
+        console.log(allOrders)
+        //console.log(forEachOrder)
+    
+     
         return (
              <section className="ordersDisplay">
                 <h1>Comandas</h1>
                 
                 <section>
-                <button onClick={this.getData}>data</button>
+                {/* <button onClick={this.getData}>data</button> */}
                 </section>
                 <section>
                     {allOrders}
@@ -102,59 +118,3 @@ export class Orders extends React.Component {
         )
     }
 }
-
-// export class Orders extends React.Component {
-//     constructor(){
-//         super ();
-//         this.state ={
-//             email:"",
-//             fullname: ""
-//         };
-//     }
-
-//     updateInput = e => {
-//         this.setState({
-//             [e.target.name]:e.target.value
-//         });
-//     }
-
-//     addUser = e => {
-//         e.preventDefault();
-//         const db = firebase.firestore();
-//         db.settings({
-//             timestampsInSnapshots :true
-//         });
-//         const userRef = db.collection('users').add({
-//             fullname:this.state.fullname,
-//             email: this.state.email
-//         });
-//         this.setState({
-//             fullname: "",
-//             email : ""
-//         })
-//     }
-//     render () {
-//         return (
-//             <section className="ordersDisplay">
-//             <h1>Comandas</h1>
-//             <form onSubmit={this.addUser}>
-//           <input
-//             type="text"
-//             name="fullname"
-//             placeholder="Full name"
-//             onChange={this.updateInput}
-//             value={this.state.fullname}
-//           />
-//           <input
-//             type="email"
-//             name="email"
-//             placeholder="Full name"
-//             onChange={this.updateInput}
-//             value={this.state.email}
-//           />
-//           <button type="submit">Submit</button>
-//         </form>
-//            </section>
-//         )
-//     }
-// }
