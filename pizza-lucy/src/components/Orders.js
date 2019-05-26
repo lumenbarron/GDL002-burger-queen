@@ -79,31 +79,19 @@ export class Orders extends React.Component {
         //const allOrders = this.state.orders.map((item) => item.name)
         // const forEachOrder = allOrders.map((doc, i) => doc.name)
         const allOrders = this.state.orders.map((item) => {
-             return (
-<section>
-    {item.name.forEach(item2 => {
-        return <p>{item2} </p>
-    })}
-</section>
-             )
-             
-             //item.name.forEach(item2 => {
-        //         return (console.log(item2))
-        //     })
-         }) 
-             // <button 
-            //   className = " btn foodCards" 
-            //   key = {i}    
-            //   name ={item.name} 
-            //   value={item.price} 
-             // onClick={this.print}>
-             //  {doc}
-              //</button>
-        //);
-        console.log(allOrders)
-        //console.log(forEachOrder)
-    
-     
+            return (
+                item.name.map((item2,i) => { 
+                    return (
+                        <p 
+                        key = {i}
+                        className = " btn foodCards">
+                        {item2.name}
+                        </p>
+                    )
+                })
+              )
+            })
+
         return (
              <section className="ordersDisplay">
                 <h1>Comandas</h1>
