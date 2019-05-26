@@ -8,42 +8,11 @@ export class Orders extends React.Component {
         this.ref=firebase.firestore().collection('comandas');
         this.unsubscribe = null;
             this.state = {
-                //loading : true,
                 orders: []
             }
-           // this.getData = this.getData.bind(this);
     }
-
-    // getData = () => {
         
-    //     console.log('jalando la data');
-
-    //     const db = firebase.firestore()
-    //     db.collection('comandas').get()
-    //     .then(function (querySnapshot){
-    //         const ordersNew = [];
-    //         querySnapshot.forEach(function(doc){
-    //             console.log(doc.id, doc.data())
-    //            // const {orde} = doc.data()
-    //             ordersNew.push({
-    //                 key : doc.id,
-    //                 doc,
-    //                 name :doc.data().orders,
-    //             })
-    //             console.log(ordersNew)
-    //         })
-    //         this.setState({ordersNew})
-    //     }).catch (function(error) {
-    //         console.log('algo salio mal', error);
-            
-    //     })
-        
-    // }
-
         getData = (querySnapshot) => {
-        
-        //console.log('jalando la data');
-
             const orders = [];
             querySnapshot.forEach(function(doc){
                 //console.log(doc.id, doc.data())
@@ -62,43 +31,32 @@ export class Orders extends React.Component {
             
     }
 
-    // componentDidMount() {
-    //     this.getData()
-    // }
-           
      componentDidMount() {
     this.unsubscribe = this.ref.onSnapshot(this.getData);
             }
-    
-    // componentWillUnmount() {
-    //             this.unsubscribe();
-    //         }
            
     render () {
-        console.log(this.state.orders)
-        //const allOrders = this.state.orders.map((item) => item.name)
-        // const forEachOrder = allOrders.map((doc, i) => doc.name)
-        const allOrders = this.state.orders.map((item) => {
-            return (
-                item.name.map((item2,i) => { 
-                    return (
-                        <p 
-                        key = {i}
-                        className = " btn foodCards">
-                        {item2.name}
-                        </p>
-                    )
-                })
-              )
-            })
-
+        //console.log(this.state.orders)
+        const allOrders = this.state.orders.map((item, i) => {
+          return (
+            <section className="border">
+              <p key={i} className=" btn foodCards">
+                {item.key}
+              </p>
+              {item.name.map((item2, i) => {
+                return (
+                  <p key={i} className=" btn foodCards">
+                    {item2.name}
+                  </p>
+                );
+              })}
+            </section>
+          );
+        });
+        
         return (
              <section className="ordersDisplay">
                 <h1>Comandas</h1>
-                
-                <section>
-                {/* <button onClick={this.getData}>data</button> */}
-                </section>
                 <section>
                     {allOrders}
                 </section>
