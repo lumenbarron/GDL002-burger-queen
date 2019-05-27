@@ -1,0 +1,51 @@
+.buttonsHomeContent {
+    display: flex;
+    justify-content: center;
+  }
+  
+.buttonsHomeLink {
+    margin : 15px;
+    font-size: 27px
+  }
+
+.buttonsInicio {
+    margin: 10px;
+    color : white;
+    font-size: 20px;
+    text-align: center
+  }
+
+.buttonsInicio:hover{
+  color:#F2B604
+}
+.navOrdersButton{
+  height: 50px;
+}
+
+#buttonBackHome {
+  background-color: #5A7202;
+  width: 110px;
+  margin-left: 10%;
+}
+
+#buttonBreakfast{
+  background-color: #AE2506;
+}
+
+#buttonLunch{
+  background-color: orangered;
+  position: absolute;
+  left: 150px;
+  display: flex
+}
+
+#buttonOrders{
+  background-color: #243540
+}
+
+#buttonsFood{
+  position: relative;
+  left: 350px;
+  top: -63px;
+  display: flex;
+}

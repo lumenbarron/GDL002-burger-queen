@@ -1,0 +1,111 @@
+.menus {
+      background: url(../images/meseros.jpg);
+      height: 768px;
+      background-position: center;
+      background-repeat: no-repeat; 
+      background-size: cover;
+      display: flex;
+    }
+
+.foodCards {
+    color: white;
+    background-color: #F27304;
+    margin : 15px;
+    display: flex;
+    font-size: 20px;
+    max-width: 130 px;
+    border-radius: 10px;
+}
+
+.updateButton {
+    color: black;
+    background-color: #F2B604;
+    margin : 10px;
+    display: flex;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 7px;
+    position: relative;
+    left: 30px;
+}
+
+.foodContentCards {
+    border: 3px solid #FFFFFF;
+box-sizing: border-box;
+border-radius: 51px;
+margin-top: 20px;
+height: 550px;
+width: 250px;
+
+}
+
+.breakfastContainerCards {
+    position: relative;
+    left: -300px;
+    width: 600px;
+}
+
+.lunchContainerCards {
+    position: relative;
+    left: -450px;
+    top: 60px;
+    width: 600px;
+}
+
+.itemsOrders{
+    color: white;
+    text-align: center;
+    padding: 3px;
+    border-bottom: 3px solid #FFFFFF
+}
+
+.foodItems{
+    width: 300px;
+    position: absolute;
+}
+
+.itemsTickets{
+    width: 300px;
+    position: absolute;
+    left: 300px
+}
+
+
+.ticketList {
+    background: #243540;
+border: 1px solid #FFFFFF;
+box-sizing: border-box;
+border-radius: 30px;
+margin-top: 20px;
+text-align: center;
+color: white;
+position: relative;
+width: 250px;
+height: 350px
+}
+.itemsName{
+    padding: 5px;
+}
+
+.inputCostumer{
+    font-size: 18px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.input-form{
+    padding: 7px;
+}
+
+.btn-input {
+    background: #243540;
+}
+
+.deletItems {
+    background: #F27304;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
