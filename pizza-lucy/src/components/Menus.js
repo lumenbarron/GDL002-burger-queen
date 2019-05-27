@@ -11,7 +11,6 @@ export class Menus extends React.Component {
         return (
           <main className="menus">
             <section className="container">
-              
                 <ButtonBackHome />
                 <ButtonOrders />
                 <section id="buttonsFood">

@@ -2,7 +2,6 @@ import React from 'react';
 
 export class Tickets extends React.Component {
     render () {
-        console.log(this.props.order)         
         const tickets = this.props.order.map((item, i ) => {
             return (
                 <h5 
@@ -18,8 +17,6 @@ export class Tickets extends React.Component {
             )
         })
         const totalTickets = this.props.order.reduce((acc, list) => acc + list.price, 0);
-        console.log(totalTickets);
-        
         return (
             <section>
                 <section className="ticketList" >
@@ -28,7 +25,6 @@ export class Tickets extends React.Component {
                      Total : {totalTickets}
                 </h4>
                 </section>
-                
                 <button 
                 className="updateButton"
                 onChange={this.props.onChange} 

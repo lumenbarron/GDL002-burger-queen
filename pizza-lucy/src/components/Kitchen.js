@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/kitchen.css';
-// import '../styles/orders.css';
 import {NavOrders} from './NavOrders'
 import { Orders } from "./Orders";
 

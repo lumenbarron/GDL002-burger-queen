@@ -49,8 +49,6 @@ this.setState({ orders: [...this.state.orders, order]})
 }
 
 deleteItem = ( id) => {
-  console.log('borrando')
-  // e.preventDefault();
   const updateOrders =this.state.orders.filter(item => {
     return item !== id
   });
@@ -66,14 +64,10 @@ onChange = (e) => {
 
 sendOrders = (e) => {
     e.preventDefault ();
-    console.log('subiendo a firestore');
     const db = firebase.firestore();
     db.collection('comandas').add({
      orders : this.state.orders
     })
-    // this.setState({
-    //   orders : []
-    // })
 }
 
   render() {

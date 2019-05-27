@@ -7,7 +7,6 @@ import "../styles/menus.css";
 export class NavOrders extends React.Component {
     render () {
         return (
-        
             <section className="navOrdersButton">
             <ButtonBackHome  />
             <ButtonMenus  />
