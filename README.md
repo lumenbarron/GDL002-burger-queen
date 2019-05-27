@@ -6,7 +6,9 @@ Como desarrolladora se realizo un proyecto por encargo para el restaurante "Il P
 ## Diseño (UI)
 La paleta de colores escogida fue en base a la imagen y logotipo que el cliente nos proporcionó.
 ![paleta de colores](https://lh3.googleusercontent.com/RK0FNh2CtZgHtbUmsnrsKErV8HguMPbANYBCvqg1RmozwH58Va9aWUiqsPGCpoAweyt7TAP8CbLt "paleta de colores")
+
 La interfaz escogida igualmente fue más simplificada para ayudar al/lxs meserxs
+
 ![prototipado](https://lh3.googleusercontent.com/0SiARQ6iPWCWicCztU1d3VQVvyHRl7fzJVkisBZz0lj7Jy2IHtcBvO9tQHsUF_Mzo-9FvHIbykxV)
 ## Contenido
 La interfaz muestra los dos menús (desayuno y almuerzo), cada uno
