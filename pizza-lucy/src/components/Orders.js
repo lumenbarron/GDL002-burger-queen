@@ -38,6 +38,7 @@ export class Orders extends React.Component {
     render () {
         //console.log(this.state.orders)
         const allOrders = this.state.orders.map((item, i) => {
+          console.log(item)
           return (
             <section key={i} className="ticketList">
               <h5 key={i} className="itemsNameOrders">

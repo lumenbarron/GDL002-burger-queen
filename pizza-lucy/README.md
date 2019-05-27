@@ -1,68 +1,43 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Il Piccolo
 
-## Available Scripts
+Como desarrolladora se realizo un proyecto por encargo para el restaurante "Il Piccolo" una pizzería italiana que acaba de llegar a GDL, que quería innovar en la forma en que toma sus pedidos . La mayor parte de los meseros usaran una _tablet_, para poder anotar sus pedidos enviarlos a la cocina para que se preparen ordenada y eficientemente..
+![il piccolo](https://lh3.googleusercontent.com/Hyc-3aldWIqQc8njDbRtIUmwohydHz1yuhm1F33vF2Hf1O1r7eXAwg4RIQwrEh7z_RXLpsu6pXxD)
 
-In the project directory, you can run:
+## Diseño (UI)
+La paleta de colores escogida fue en base a la imagen y logotipo que el cliente nos proporcionó.
+![paleta de colores](https://lh3.googleusercontent.com/RK0FNh2CtZgHtbUmsnrsKErV8HguMPbANYBCvqg1RmozwH58Va9aWUiqsPGCpoAweyt7TAP8CbLt "paleta de colores")
+La interfaz escogida igualmente fue más simplificada para ayudar al/lxs meserxs
+![prototipado](https://lh3.googleusercontent.com/0SiARQ6iPWCWicCztU1d3VQVvyHRl7fzJVkisBZz0lj7Jy2IHtcBvO9tQHsUF_Mzo-9FvHIbykxV)
+## Contenido
+La interfaz muestra los dos menús (desayuno y almuerzo), cada uno
+con todos sus _productos_. El mesero puede ir eligiendo qué _productos_
+agregar y la mostrará el _resumen del pedido_ con el costo total.
 
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+> Tenemos 2 menús: uno muy sencillo para el desayuno:
+>
+> | Ítem                      |Precio $|
+> |---------------------------|------|
+> | Café americano            |    5 |
+> | Café con leche            |    7 |
+> | Sandwich de jamón y queso |   10 |
+> | Jugo de frutas natural              |    7 |
+>
+> Y otro menú para el resto del día:
+>
+> | Ítem                      |Precio|
+> |---------------------------|------|
+> |**Pizzas**             |   **$**   |
+> |Pizza peperoni         |    50|
+> |Pizza hawaina          |    50|
+> |**Para tomar**         |   **$**   |
+> |Agua natura            |     5|
+> |Bebida gaseosa         |     10|
+> |Extra queso            |     5|
+>
+> **Importante:** 
+>
+> Nuestros clientes son bastante indecisos, por lo que es muy común que cambien
+> su pedido varias veces antes de finalizarlo.
+## Tecnologías
+Para este proyecto se utilizó React JS como librería de JS, algunos componenetes de Boostrap y CSS.
+Para cambiar entre pantallas se uso una SPA(_Single Page App_) gracias a un router de una dependencia de NPM (_react-router-dom_).Para la base de datos se utilizó Firebase Firestore.
