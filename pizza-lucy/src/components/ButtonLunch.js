@@ -1,5 +1,5 @@
 import React from 'react';
-import {LunchCards} from './LunchCards';
+import {LunchContainer} from './LunchContainer';
 
 export class ButtonLunch extends React.Component {
     constructor (props) {
@@ -23,7 +23,7 @@ export class ButtonLunch extends React.Component {
               href="1.2" id= "buttonLunch">
               Almuerzo
               </a>
-              {this.state.show && <LunchCards className="showCards" />}
+              {this.state.show && <LunchContainer className="showCards" />}
             </section>
     )
     }

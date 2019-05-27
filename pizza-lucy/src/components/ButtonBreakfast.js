@@ -1,11 +1,10 @@
 import React from 'react';
-import {BreakfastCards2} from './BreakfastCards2';
+import {BreakfastContainer} from './BreakfastContainer';
 
 export class ButtonBreakfast extends React.Component {
     constructor (props) {
       super (props)
       this.state = { show : false};
-      // this.toggleDiv = this.toggleDiv.bind(this)
     }
   
     toggleDiv = (e) => {
@@ -22,7 +21,7 @@ export class ButtonBreakfast extends React.Component {
               href="1.1" id= "buttonBreakfast">
               Desayuno
               </a>
-              {this.state.show && <BreakfastCards2 className="showCards" />}
+              {this.state.show && <BreakfastContainer className="showCards" />}
           </section>
     )
     }
