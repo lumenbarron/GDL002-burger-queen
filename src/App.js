@@ -4,7 +4,7 @@ import './App.css';
 import {Home} from './components/Home';
 import {Menus} from './components/Menus';
 import {Kitchen} from './components/Kitchen';
-import {Orders} from './components/Orders'
+// import {Orders} from './components/Orders'
 
 
 const App = () => (
@@ -13,7 +13,7 @@ const App = () => (
       <Route exact path="/" component = {Home} />
       <Route path="/waiter" component = {Menus} />
       <Route path="/kitchen" component = {Kitchen} />
-      <Route path="/orders" component = {Orders} />
+      <Route path="/orders" component = {Kitchen} />
     </Switch>
   </BrowserRouter>
 )

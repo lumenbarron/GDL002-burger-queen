@@ -4,7 +4,11 @@ import {BreakfastContainer} from './BreakfastContainer';
 export class ButtonBreakfast extends React.Component {
     constructor (props) {
       super (props)
-      this.state = { show : false};
+      this.state = { 
+        show : false,
+        showBreakfast: false,
+        showLunch: false,
+      };
     }
   
     toggleDiv = (e) => {

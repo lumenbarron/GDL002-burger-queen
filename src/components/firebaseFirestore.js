@@ -1,5 +1,4 @@
 import * as firebase from 'firebase';
-//import firestone from 'firebase/firestore'
 
 //const settings = {timestampsInSnapshots: true};
 

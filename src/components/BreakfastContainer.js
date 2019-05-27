@@ -3,30 +3,31 @@ import { Tickets } from './Tickets';
 import {CustomerInput} from './CustomerInput';
 import firebase from './firebaseFirestore';
 
-export class LunchContainer extends React.Component {
+
+export class BreakfastContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.ref=firebase.firestore().collection('almuerzo');
+    this.ref=firebase.firestore().collection('desayuno');
     this.refOrder=firebase.firestore().collection('comandas');
     this.unsubscribe = null;
     this.state = {
-      almuerzo : [],
+      desayuno: [],
       orders: []
     };
   }
 
   onCollectionUpdate = (querySnapshot) => {
-    const almuerzo = [];
+    const desayuno = [];
     querySnapshot.forEach((doc) => {
         const { title, price } = doc.data();
-        almuerzo.push({
+        desayuno.push({
             key : doc.id,
             doc,
             title,
             price
         });
     });
-    this.setState({almuerzo});
+    this.setState({desayuno});
   }
 
 
@@ -34,23 +35,23 @@ export class LunchContainer extends React.Component {
     this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
   }
 
+
 print = (event) => {
   const target=event.currentTarget;
   const name = target.getAttribute('name')
-  const price= target.getAttribute('value')
+  const price = target.getAttribute('value')
   const id = target.getAttribute('name')
   const order = {
     id,
     name, 
-    price: Number(price)
+    price : Number(price)
   }
-this.setState({ orders: [...this.state.orders, order]})
+
+  this.setState({ orders : [...this.state.orders, order] })
 
 }
 
 deleteItem = ( id) => {
-  console.log('borrando')
-  // e.preventDefault();
   const updateOrders =this.state.orders.filter(item => {
     return item !== id
   });
@@ -71,38 +72,35 @@ sendOrders = (e) => {
     db.collection('comandas').add({
      orders : this.state.orders
     })
-    // this.setState({
-    //   orders : []
-    // })
 }
 
   render() {
-    const luch = this.state.almuerzo.map((item, i) => {
+    const breakfast = this.state.desayuno.map((item, i) => {
       return (
             <button 
             className = " btn foodCards" 
-            key = {i}
+            key = {i}    
             name ={item.title} 
             value={item.price} 
             onClick={this.print}>
-              {item.title} ${item.price}
+             {item.title} ${item.price}
             </button>
       );
     });
 
     return(
       <section >
-        <section className='foodContentCards lunchContainerCards'>
+        <section className='foodContentCards breakfastContainerCards'>
         <CustomerInput />
-          <section className='foodItems'>{luch}</section>
+          <section className='foodItems' >{breakfast}</section>
             <section className='itemsTickets'>
-              <Tickets 
-              order={this.state.orders}
-              delete = {this.deleteItem}
-              sendOrders={this.sendOrders}
-              onChange={this.onChange}
-               />
-            </section>
+             <Tickets 
+            order={this.state.orders}
+            delete = {this.deleteItem}
+            sendOrders={this.sendOrders}
+            onChange={this.onChange}
+            />
+          </section>
         </section>
       </section>
     ) 

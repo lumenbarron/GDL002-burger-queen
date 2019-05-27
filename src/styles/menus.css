@@ -1,10 +1,11 @@
 .menus {
       background: url(../images/meseros.jpg);
-      height: 768px;
+      height: 1024px;
       background-position: center;
       background-repeat: no-repeat; 
       background-size: cover;
       display: flex;
+      justify-content: center;
     }
 
 .foodCards {
@@ -82,7 +83,8 @@ text-align: center;
 color: white;
 position: relative;
 width: 250px;
-height: 350px
+height: 350px;
+margin: 3px
 }
 .itemsName{
     padding: 5px;
