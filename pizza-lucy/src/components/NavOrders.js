@@ -11,6 +11,7 @@ export class NavOrders extends React.Component {
             <section className="navOrdersButton">
             <ButtonBackHome  />
             <ButtonMenus  />
+            <h1>Comandas</h1>
             </section>
         
         )

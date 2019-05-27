@@ -1,9 +1,6 @@
 import React from 'react';
-import '../styles/orders.css';
 import firebase from "./firebaseFirestore";
-import {NavOrders} from './NavOrders'
-// import {ButtonBackHome} from './ButtonBackHome';
-// import {ButtonMenus} from './ButtonMenus'
+
 
 export class Orders extends React.Component {
     constructor(props){
@@ -42,10 +39,10 @@ export class Orders extends React.Component {
         //console.log(this.state.orders)
         const allOrders = this.state.orders.map((item, i) => {
           return (
-            <section key={i} className="border">
-              <p key={i} className=" btn foodCards">
+            <section key={i} className="ticketList">
+              <h5 key={i} className="itemsNameOrders">
                 {item.key}
-              </p>
+              </h5>
               {item.name.map((item2, i) => {
                 return (
                   <p key={i} className=" btn foodCards">
@@ -58,14 +55,8 @@ export class Orders extends React.Component {
         });
         
         return (
-             <section className="ordersDisplay">
-               <NavOrders />
-              {/* <ButtonBackHome  />
-              <ButtonMenus  /> */}
-                <h1>Comandas</h1>
-                <section>
+             <section className='ordersContainer'>
                     {allOrders}
-                </section>
             </section>
         )
     }

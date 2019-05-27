@@ -6,3 +6,34 @@
   background-size: cover;
   display: flex;
 }
+
+.ordersDisplay {
+    
+  background: url(../images/comandas.jpg);
+    height: 1024px;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    /* display: flex; */
+}
+
+.navOrdersButton{
+position: absolute;
+display: flex;
+justify-content: center;
+}
+
+.ordersContainer {
+  display: flex;
+  flex-direction: row;
+    /* height: 400px; */
+  flex-wrap: wrap;
+  top: 80px;
+  position: relative;
+}
+
+.itemsNameOrders{
+  color: white;
+  text-align: center;
+  padding: 3px;
+}
